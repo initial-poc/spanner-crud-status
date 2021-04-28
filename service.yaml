@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: spanner-crud-status
+  name: spanner-crud-status-service
   labels:
-    app: spanner-crud-status
+    app: spanner-crud-status-service
 spec:
   ports:
     - protocol: TCP
