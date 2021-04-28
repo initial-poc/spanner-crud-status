@@ -1,18 +1,17 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pnr-order-poc-deployment
+  name: spanner-crud-status-deployment
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: pnr-order-poc-pod
+      app: spanner-crud-status-pod
   template:
     metadata:
       labels:
-        app: pnr-order-poc-pod
+        app: spanner-crud-status-pod
     spec:
       containers:
-        - image: gcr.io/pnr-order-poc/spanner-crud-status-publisher:latest
-          name: pnr-order-poc
-            
+        - image: gcr.io/pnr-order-poc/spanner-crud-status:latest
+          name: spanner-crud-status
