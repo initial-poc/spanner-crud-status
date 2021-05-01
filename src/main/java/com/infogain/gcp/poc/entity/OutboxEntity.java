@@ -34,6 +34,10 @@ public class OutboxEntity {
 
     @Column(name = "status")
     private Integer status ;
+    
+    @Column(name = "updated")
+    private Timestamp updated;
+    
     @SneakyThrows
     public OutboxModel buildModel() {
         OutboxModel outboxModel = new OutboxModel();

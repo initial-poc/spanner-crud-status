@@ -28,6 +28,7 @@ public class OutboxModel {
         outboxEntity.setVersion(version);
         outboxEntity.setCreated(Timestamp.parseTimestamp(created));
         outboxEntity.setStatus(Constants.ZERO);
+        outboxEntity.setUpdated(Timestamp.now());
         return outboxEntity;
     }
 
